@@ -239,4 +239,18 @@ public interface MultiverseCoreConfig extends ConfigurationSerializable {
      * @param idonotwanttodonate True if donation/patreon messages should be shown.
      */
     void setShowDonateMessage(boolean idonotwanttodonate);
+
+    /**
+     * Sets whether or not Multiverse should handle game mode and flight.
+     *
+     * @param handleGameModeAndFlight True if Multiverse should handle game mode and flight.
+     */
+    void setHandleGameModeAndFlight(boolean handleGameModeAndFlight);
+
+    /**
+     * Gets whether or not Multiverse should handle game mode and flight.
+     *
+     * @return True if Multiverse should handle game mode and flight.
+     */
+    boolean isHandlingGameModeAndFlight();
 }

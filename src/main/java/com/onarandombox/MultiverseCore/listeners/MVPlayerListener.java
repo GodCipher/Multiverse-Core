@@ -9,6 +9,7 @@ package com.onarandombox.MultiverseCore.listeners;
 
 import com.dumptruckman.minecraft.util.Logging;
 import com.onarandombox.MultiverseCore.MultiverseCore;
+import com.onarandombox.MultiverseCore.MultiverseCoreConfiguration;
 import com.onarandombox.MultiverseCore.api.MVWorldManager;
 import com.onarandombox.MultiverseCore.api.MultiverseWorld;
 import com.onarandombox.MultiverseCore.enums.RespawnType;
@@ -346,6 +347,8 @@ public class MVPlayerListener implements Listener {
      * @param world The world the player is in.
      */
     public void handleGameModeAndFlight(final Player player, final MultiverseWorld world) {
+        if (!MultiverseCoreConfiguration.getInstance().isHandlingGameModeAndFlight()) return;
+
         // We perform this task one tick later to MAKE SURE that the player actually reaches the
         // destination world, otherwise we'd be changing the player mode if they havent moved anywhere.
         this.plugin.getServer().getScheduler().scheduleSyncDelayedTask(this.plugin,
