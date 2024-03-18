@@ -347,7 +347,7 @@ public class MVPlayerListener implements Listener {
      * @param world The world the player is in.
      */
     public void handleGameModeAndFlight(final Player player, final MultiverseWorld world) {
-        if (!MultiverseCoreConfiguration.getInstance().isHandlingGameModeAndFlight()) {
+        if (!this.plugin.getMVConfig().isHandlingGameModeAndFlight()) {
             Logging.fine("GameMode and Flight handling is disabled in the config." +
                     " Not handling it for player: " + player.getName());
             return;
