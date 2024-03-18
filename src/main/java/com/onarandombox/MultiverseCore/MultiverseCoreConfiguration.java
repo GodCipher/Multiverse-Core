@@ -393,6 +393,6 @@ public class MultiverseCoreConfiguration extends SerializationConfig implements 
 
     @Override
     public boolean isHandlingGameModeAndFlight() {
-        return handlegamemodeandflight;
+        return !handlegamemodeandflight;
     }
 }
